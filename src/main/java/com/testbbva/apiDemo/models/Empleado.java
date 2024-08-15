@@ -5,15 +5,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="empleado")
+@Table(name="empleados")
 public class Empleado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private long IdEmpleado;
 
     @Column
     private String nombre;
@@ -33,11 +34,11 @@ public class Empleado {
     @Column
     private String jefeDirecto;
 
-    @Column
-    private long sueldo;
+    @ManyToOne
+    private Sueldo sueldo;
 
-    public long getId() {
-        return Id;
+    public long getIdEmpleado() {
+        return IdEmpleado;
     }
 
     public String getNombre() {
@@ -64,7 +65,7 @@ public class Empleado {
         return jefeDirecto;
     }
 
-    public long getSueldo() {
+    public Sueldo getSueldo() {
         return sueldo;
     }
 
@@ -92,7 +93,7 @@ public class Empleado {
         this.jefeDirecto = jefeDirecto;
     }
 
-    public void setSueldo(long sueldo) {
+    public void setSueldo(Sueldo sueldo) {
         this.sueldo = sueldo;
     }
 

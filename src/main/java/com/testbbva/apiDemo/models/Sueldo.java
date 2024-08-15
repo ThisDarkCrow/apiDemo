@@ -8,28 +8,28 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "sueldo")
+@Table(name = "sueldos")
 public class Sueldo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long idSueldo;
 
     @Column
     private String bandasalarial;
 
     @Column
-    private int sueldoenpesos;
+    private double sueldoenpesos;
 
-    public long getId() {
-        return id;
+    public long getIdSueldo() {
+        return idSueldo;
     }
 
     public String getBandasalarial() {
         return bandasalarial;
     }
 
-    public int getSueldoenpesos() {
+    public double getSueldoenpesos() {
         return sueldoenpesos;
     }
 
@@ -37,7 +37,7 @@ public class Sueldo {
         this.bandasalarial = bandasalarial;
     }
 
-    public void setSueldoenpesos(int sueldoenpesos) {
+    public void setSueldoenpesos(double sueldoenpesos) {
         this.sueldoenpesos = sueldoenpesos;
     }
     

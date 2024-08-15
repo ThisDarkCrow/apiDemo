@@ -17,18 +17,18 @@ import com.testbbva.apiDemo.models.Empleado;
 import com.testbbva.apiDemo.services.EmpleadoService;
 
 @RestController
-@RequestMapping("/empleado")
+@RequestMapping("/empleados")
 public class EmpleadoController {
     
     @Autowired
     private EmpleadoService empleadoService;
-
-    @GetMapping
+ 
+    @GetMapping //(value="empleados")
     public ArrayList<Empleado> getEmpleados(){
         return this.empleadoService.getEmpleados();
     }
 
-    @PostMapping
+    @PostMapping //(value = "empleados")
     public Empleado saveEmpleado(@RequestBody Empleado empleado){
         return this.empleadoService.saveEmpleado(empleado);
     }

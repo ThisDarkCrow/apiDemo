@@ -23,7 +23,7 @@ public class SueldoService {
         return sueldoRepository.save(sueldo);
     }
 
-    public Optional<Sueldo> getAreaById(Long Id) {
+    public Optional<Sueldo> getSueldoById(Long Id) {
         return sueldoRepository.findById(Id);
     }
 
