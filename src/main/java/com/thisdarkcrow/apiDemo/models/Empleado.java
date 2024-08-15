@@ -1,4 +1,4 @@
-package com.testbbva.apiDemo.models;
+package com.thisdarkcrow.apiDemo.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

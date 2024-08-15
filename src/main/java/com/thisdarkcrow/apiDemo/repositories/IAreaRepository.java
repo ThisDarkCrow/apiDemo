@@ -1,6 +1,6 @@
-package com.testbbva.apiDemo.repositories;
+package com.thisdarkcrow.apiDemo.repositories;
 
-import com.testbbva.apiDemo.models.Area;
+import com.thisdarkcrow.apiDemo.models.Area;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

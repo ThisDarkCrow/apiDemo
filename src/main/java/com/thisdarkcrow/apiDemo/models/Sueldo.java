@@ -1,4 +1,4 @@
-package com.testbbva.apiDemo.models;
+package com.thisdarkcrow.apiDemo.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,28 +8,28 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "sueldos")
+@Table(name = "sueldo")
 public class Sueldo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idSueldo;
+    private long id;
 
     @Column
     private String bandasalarial;
 
     @Column
-    private double sueldoenpesos;
+    private int sueldoenpesos;
 
-    public long getIdSueldo() {
-        return idSueldo;
+    public long getId() {
+        return id;
     }
 
     public String getBandasalarial() {
         return bandasalarial;
     }
 
-    public double getSueldoenpesos() {
+    public int getSueldoenpesos() {
         return sueldoenpesos;
     }
 
@@ -37,7 +37,7 @@ public class Sueldo {
         this.bandasalarial = bandasalarial;
     }
 
-    public void setSueldoenpesos(double sueldoenpesos) {
+    public void setSueldoenpesos(int sueldoenpesos) {
         this.sueldoenpesos = sueldoenpesos;
     }
     
