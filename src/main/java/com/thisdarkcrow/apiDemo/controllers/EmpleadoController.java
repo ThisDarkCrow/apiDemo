@@ -17,7 +17,7 @@ import com.testbbva.apiDemo.models.Empleado;
 import com.testbbva.apiDemo.services.EmpleadoService;
 
 @RestController
-@RequestMapping("/empleado")
+@RequestMapping("/empleados")
 public class EmpleadoController {
     
     @Autowired
